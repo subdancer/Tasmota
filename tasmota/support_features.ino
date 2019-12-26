@@ -496,8 +496,9 @@ void GetFeatures(void)
 #ifdef USE_GPS
   feature5 |= 0x00400000;
 #endif
-//  feature5 |= 0x00800000;
-
+#ifdef USE_VEML7700
+  feature5 |= 0x00800000;  // xsns_58_veml7700.ino
+#endif
 //  feature5 |= 0x01000000;
 //  feature5 |= 0x02000000;
 //  feature5 |= 0x04000000;
